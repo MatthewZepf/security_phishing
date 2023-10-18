@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>You have be</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h2>YOU HAVE BEEN PHISHED</h2>
+    </div>
+    <div class="content">
+        <img src="{{ url_for('static', filename='draw.jpg') }}" alt="Static Image" class="middle-image">
+        <div class="system-info">
+            <h5>Your System Information</h5>
+            <p>Hostname: {{ hostname }}</p>
+            <p>IP Address: {{ ip_address }}</p>
+            <p>Location: {{ city }}, {{ region }}, {{ country }}</p>
+            <p>CPU Usage: {{ cpu_usage }}%</p>
+            <p>Memory Usage: {{ memory_usage }}%</p>
+        </div>
+    </div>
+    <div class="bottom-bar">
+        <p>with &lt;3 from security</p>
+    </div>
+</body>
+</html>
